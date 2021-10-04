@@ -290,8 +290,15 @@ int FMOD_Studio_Bus_GetPaused(BUS *bus, bool *paused)
 
 int FMOD_Studio_EventInstance_GetDescription(EVENTINSTANCE *eventinstance, EVENTDESCRIPTION **description)
 {
-	*description = eventinstance->evd;
-	return 0;
+	if (description && eventinstance)
+	{
+		*description = eventinstance->evd;
+		return 0;
+	}
+	else
+	{
+		return -1;
+	}
 }
 
 int FMOD_Studio_EventDescription_GetPath(EVENTDESCRIPTION *eventdescription, char *path, int size, int *retrieved)
@@ -469,6 +476,21 @@ int FMOD_Studio_EventInstance_GetPaused(EVENTINSTANCE *eventinstance, int *pause
 }
 
 int FMOD_Studio_EventInstance_GetPlaybackState(EVENTINSTANCE *eventinstance, int *state)
+{
+	STUB();
+}
+
+int FMOD_Studio_System_UnloadAll(SYSTEM *system)
+{
+	STUB();
+}
+
+int FMOD_System_RegisterOutput(SYSTEM *system, void *description, unsigned int *handle)
+{
+	STUB();
+}
+
+int FMOD_System_SetOutputByPlugin(SYSTEM *system, unsigned int handle)
 {
 	STUB();
 }

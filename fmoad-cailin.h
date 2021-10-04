@@ -134,6 +134,9 @@ int FMOD_Studio_System_SetListenerAttributes();	// TODO: complete function signa
 int FMOD_Studio_System_Update(SYSTEM *system);
 int FMOD_Studio_VCA_SetVolume(VCA *vca, float volume);
 int FMOD_Studio_VCA_GetVolume(VCA *vca, float *volume, float *finalvolume);
+int FMOD_Studio_System_UnloadAll(SYSTEM *system);
+int FMOD_System_RegisterOutput(SYSTEM *system, void *description, unsigned int *handle);
+int FMOD_System_SetOutputByPlugin(SYSTEM *system, unsigned int handle);
 
 int get_sound_idx(char *path);
 
