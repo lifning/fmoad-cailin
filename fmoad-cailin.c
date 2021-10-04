@@ -14,6 +14,12 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
+#ifdef __linux__
+#include <stdlib.h>
+#include <string.h>
+#include <bsd/string.h>
+#endif
+
 #include "fmoad-cailin.h"
 #include "al.h"
 
